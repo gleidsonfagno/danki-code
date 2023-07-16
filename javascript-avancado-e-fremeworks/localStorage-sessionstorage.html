@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            if(typeof(Storage) !== "undefined"){
+                alert(" compativel")
+                initialize();
+            }else{
+                alert("atualize o navegador")
+            }
+
+            function initialize(){
+                if(sessionStorage.getItem("nome") !== null){
+                    console.log("ola,"+ sessionStorage.nome +", Seja bem-vindo(a) de volta:");
+                }else{
+                console.log("ola, esssa e primeira vez no nosso site :");
+                sessionStorage.nome = "fagno"
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+html,body{
+    height: 100%;
+}
+.box{
+    width: 400px;
+    height: inherit;
+    background-color: gray;
+    text-align: center;
+    margin: auto;
+    color: #fff;
+}

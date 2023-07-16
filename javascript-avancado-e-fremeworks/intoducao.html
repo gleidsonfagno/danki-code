@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="main"></h1>
+    <div onmousemove="hover()" class="teste">
+        <p>Ola</p>
+    </div>
+    <p>hey ow</p>
+
+
+    <div class="text">
+
+    </div>
+    <script>
+        window.onload = function(){
+            var el = document.querySelector(".main")
+
+            el.innerHTML = "hello word"
+            el.style.color = "red"
+            el.style.background = "#ccc"
+            el.style.padding = "16px"
+            console.log(el)
+
+            // querys
+            var el2 = document.querySelectorAll("p");
+            for(var i = 0; i < el2.length; i++){
+                el2[i].style.color = "green"
+            }
+            
+        }
+
+        // eventos 
+        function hover(){
+            alert("ola")
+        }
+        var text = document.querySelector(".text");
+        text.innerHTML = " <div onmousemove='hover()' class='teste'><p>evento direto no javascript</p></div>"
+    </script>
+</body>
+</html>

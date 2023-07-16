@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    align-items: center;
+    background: #b5b5b8e2;
+}
+.teste,.teste1,.teste2{
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    background: #ccc;
+    margin: 30px 0 0 30px;
+}
+
+.teste1{
+    background: #989898;
+}
+.teste2{
+    background: #505050;
+}
+.teste:hover{
+    background: #202020;
+}
+.teste1:active{
+    background: #774466;
+}
+input:focus{
+    background-color: #202020;
+}
+textarea{
+    display: block;
+    width: 600px;
+    height: 100px;
+}
+
+ul{
+    list-style-position: inside;
+}
+/* pega o elemento do tipo e numero selecionado */
+ul li:nth-of-type(2){
+    color: red;
+}
+/* pego o terceiro elemento da li */
+ul li:nth-child(3){
+    color: green;
+}
+.box{
+    width: 100%;
+}
+.item{
+    float: left;
+    border: 1px solid black;
+    box-sizing: border-box;
+    height: 200px;
+    width: 33.3%;
+    background-color: #774466;
+}
+/* pego ultimo elemento */
+.box .item:last-of-type{
+    background: green;
+}
+.box .item:nth-child(1){
+    background: gray;
+}
+
+.box .item:last-of-type p{
+    color: #ccc;
+}
+.box .item:last-child p{
+    color: #ccc;
+}
+.aplicando > div{
+    width: 300px;
+    height: 100px;
+    background-color: #202020;
+    border: 1px solid black;
+}
+/* aplique o estilo exeto para que posue a classe .one */
+.aplicando div:not(.one){
+    background: gold;
+}
+p:empty{
+    width: 100%auto;
+    height: 100px;
+    border: 1px solid black;
+    background: #774466;
+}
+/* iserir conteudo depois dos elementos */
+.empyt::after{
+    content: "teste de after";
+    padding: 20px;
+}
+.empyt::before{
+    content: "inserir elementos antes com o before";
+    color: red;
+}
+.parent{
+    width: 100%;
+    padding: 90px 0;
+    background-color: #00ffc3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.parent .item{
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    background-color: green;
+    margin: 20px 0;
+}
+/* acada dois aplique a cor vermelha */
+.parent div:nth-of-type(2n +1) {
+    background: red;
+}
+
+.parent div:nth-child(2){
+    background-color: blue;
+}
+/* o primeiro paragrafo aplique essa prpriedade */
+.parent p:first-child{
+    color: orange;
+}
